@@ -1,0 +1,33 @@
+.Boule
+{
+   width: 400px;
+   overflow: hidden;
+}
+.Images
+{
+    display: flex;
+    animation: defile 60s linear infinite;
+}
+@keyframes defile
+{
+    0%
+    {
+        transform:translate(0px);
+    }
+    25%
+    {
+        transform: translate(-550px);
+    }
+    50%
+    {
+        transform: translate(-1100px);
+    }
+     75%
+     {
+         transform: translate(-1650px);
+     }
+     100%
+     {
+         transform: translate(0px);
+     }
+}

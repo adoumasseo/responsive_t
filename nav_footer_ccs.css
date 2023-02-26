@@ -1,0 +1,2000 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital@0;1&display=swap'); */
+*
+{
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+html
+{
+    width: 100%;
+}
+body
+{
+    width: 100%;
+}
+.NameOfMenu
+{
+    display: none;
+}
+.loader_container
+{
+    position: fixed;
+    width: 100%;
+    height: 1000%;
+    background: white;
+    top: 0%;
+    left: 0%;
+    z-index: 1000;
+    transition: all 1s ease;
+}
+.loader_container.hidden
+{
+    opacity: 0;
+    visibility: hidden;
+}
+.loader
+{
+    width: 100px;
+    height: 100px;
+    border: 12px solid rgb(231, 230, 230);
+    border-top: 12px solid rgb(0, 51, 205);
+    border-radius:50%;
+    box-shadow: 0px 0px 6px 2px rgb(165, 165, 165);
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%,-50%);
+    animation: loader 1s linear infinite;
+}
+@keyframes loader{
+        0%
+        {
+            transform: translate(-50%,-50%) rotate(0deg);
+        }
+        100%
+        {
+            transform:translate(-50%,-50%) rotate(360deg);
+        }
+    }
+/* positionnement nécessaire pour pouvoir fixer le bloc du nav_bar */
+/* Gestion de la nav_bar non connecte */
+#nav
+{
+    position: relative;   
+    z-index: 2;
+
+} 
+
+/*creation de la nav_bar   */
+.div_icon_search_responsive
+{
+    display: none;
+}
+ #nav_bar
+{ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    background-color:  rgb(0, 51, 205);
+}
+/* premiere partie de la nav_bar constitué du logo uniquement */
+
+/* undraw */
+#logo
+{
+    width: 170px;
+    height: 70px;
+    /* border: 1px solid black;  */
+}
+/* deuxième partie de la nav_bar constitué de la bar de recherche des liens login signup apropos et profil */
+.nav_part2
+{
+    width: 40%;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    /* border: 1px solid black;  */
+    
+}
+/* style bar de recherche */
+#ig-pedia_search_bar
+{
+    display: flex;
+    justify-content: flex-start;
+    /* border: 1px solid black; */
+}
+#search
+{
+    height: 30px;
+    outline: none;
+    width: 350px;
+    border: 0px;
+    border-radius: 14px 0px 0px 14px;
+    padding-left: 15px;
+}
+.bouton_search
+{
+    width: 70px;
+    border: 0px;
+    background-color: white;
+    border-radius: 0px 14px 14px 0px;
+    cursor: pointer;
+}
+/* gestion des liens  */
+#ig-pedia_link
+{
+    display: flex;
+    justify-content: space-around ;
+    width: 500px;
+}
+#ig-pedia_link a
+{
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    align-items: center;
+    text-decoration: none;
+}
+.login
+{
+    width: 100px;
+    background-color: white;
+    border-radius: 14px;
+    text-align: center;
+    border: 0px;
+    color: black;
+    font-weight: bold;
+
+}
+.signup
+{
+    width: 100px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 14px;
+    text-align: center;
+    border: 0px;
+    color: white;
+    font-weight: bold;
+    
+}
+.apropos
+{
+    width: 100px;
+    background-color: white;
+    border-radius: 14px;
+    text-align: center;
+    border: 0px;
+    color: black;
+    font-weight: bold;
+}
+.profil
+{
+    background-color: white;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+
+}
+.profil_text
+{
+    display: none;
+}
+#Bloc_menu
+{
+    width: 32px;
+    height: 30px;
+    display: none;
+}
+.menu
+{
+    font-size: 40px;
+}
+
+/* Création du Footer */
+footer
+{
+    width: auto;
+    height: 490px;
+    background: rgb(0, 51, 205);
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+    /* border: 1px solid black ; */
+}
+/* Gestion de la premiere partie du footer  */
+.liens_footer
+{
+    display: flex;
+    justify-content: space-around;
+    
+    width: 100%;
+    height: 80%;
+    /* border: 1px solid black ; */
+}
+
+.contenu
+{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid black ; */
+
+}
+.contenu h1 , .aide h1
+{
+    margin-top: 40px ;
+    margin-left: 30px;
+    color: white;
+    font-size: 16px;
+}
+.contenu a , .aide a 
+{
+    width: 70%;
+    display: inline-block;
+    text-decoration: none;
+
+    color: white;
+    margin-top: 30px ;
+    margin-left: 30px;
+    font-size: 14px;
+}
+.aide
+{
+    width: 15%;
+    /* border: 1px solid black ;    */
+}
+.trait
+{
+    width: 88%;
+    margin: auto;
+    height: 1px;
+    background: linear-gradient(120deg,rgb(113, 110, 110),rgb(255, 255, 255),rgb(96, 93, 93));
+}
+/* gestion de la deuxieme partie du footer  */
+.icone_footer
+{
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    height: 19%;
+    width: 88%;
+    margin: auto;
+    /* border: 1px solid black; */
+}
+.langage
+{
+    display: flex;
+    width: 18.56%;
+    justify-content: flex-start;
+    align-items: center;
+    /* border: 1px solid rgb(0, 0, 0) ; */
+}
+#lang
+{
+    outline: none;
+    border: 0px;
+    background: rgb(0, 51, 205);
+    color: white;
+}
+.icon
+{
+   font-size: 20px;
+}
+/* Gestion de la deuxieme partie de la deuxieme partie du footer parceque oui cette dernière est subdivisé en trois partie donc trois div */
+.copyrigth
+{
+    width: 50%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Gestion de la troisième partie */
+.icon_div
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 24%;
+    /* border: 1px solid black; */
+}
+.icon_div a
+{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    /* border: 1px solid black; */
+}
+.icon_div a img
+{
+    width:35px;
+    height: 35px;
+    border-radius: 50%;
+}
+.icon_div a img[alt="Twitter icon "]
+{
+    background: white;
+}
+/* cration du contenu  */
+#espace
+{
+    height: 100px;
+
+}
+#Title
+{
+    display: inline-block;
+    color: rgb(0, 51, 205);
+}
+.h1
+{
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    font-size: x-large;
+    /* border: 1px solid black; */
+}
+#categorie
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto;
+    width: 70%;
+    border-radius: 5px 5px 0px 0px;
+    height: 530px;
+    border-bottom: 3px solid rgb(0, 51, 205);
+    border-right: 0.5px solid rgb(229, 229, 229);
+    box-shadow: -5px -5px 5px rgb(229, 229, 229);
+}
+.img_categorie_1
+{
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.image
+{
+    width: 220px;
+    height: 250px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    /* border: 1px solid black; */
+}
+.text
+{
+    /* border: 1px solid black; */
+    text-align: center;
+    font-weight: bold;
+}
+.img{
+    width: 220px;
+    height: 200px;
+}
+.link_categorie
+{
+    text-decoration: none;
+    color: black;
+}
+.image:hover 
+{
+    cursor: pointer;
+    transform: scale(1.05);
+    font-style: italic;
+}
+.img_categorie_2
+{
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#title_categorie
+{
+    width: 70%;
+    margin-top: 100px;
+    margin-left: 15%;
+    padding: 15px;
+    font-size: large;
+}
+/* les carrouselles */
+.block_slide
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid black; */
+
+}
+.slider
+{
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    /* border: 1px solid black; */
+    
+}
+.slides
+{
+    width: 500%;
+    height: 500px;
+    display: flex;
+    position: relative;
+}
+.slides input{
+    display: none;
+}
+.slide{
+    width: 20%;
+    transition: 2s;
+}
+.slide img
+{
+    width: 500px;
+    height: 500px;
+}
+/*  css pour le glissement manuel*/
+.navigation-manual
+{
+    position: absolute;
+    width: 500px;
+    bottom: 2%;
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid black; */
+    
+}
+.manual-btn
+{
+    border: 2px solid rgb(72, 118, 255) ;
+    padding: 7px;
+    border-radius:10px ;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.manual-btn:not(:last-child)
+{
+    margin-right: 40px;
+}
+.manual-btn:hover
+{
+    background:rgb(0, 51, 205) ;
+}
+#radio1:checked ~ .first
+{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first
+{
+    margin-left: -20%;
+}
+
+#radio3:checked ~ .first
+{
+    margin-left: -40%;
+}
+
+#radio4:checked ~ .first
+{
+    margin-left: -60%;
+}
+/* css automatique navigation */
+.navigation-auto
+{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    bottom: 2%;
+
+}
+.navigation-auto div
+{
+    border: 2px solid rgb(72, 118, 255) ;
+    padding: 7px;
+    border-radius: 10px;
+    transition: 1s;
+}
+.navigation-auto div:not(:last-child)
+{
+    margin-right:40px ;
+}
+#radio1:checked ~.navigation-auto .auto-btn1
+{
+    background: rgb(0, 51, 205);
+}
+
+#radio2:checked ~.navigation-auto .auto-btn2
+{
+    background: rgb(0, 51, 205);
+}
+
+#radio3:checked ~.navigation-auto .auto-btn3
+{
+    background: rgb(0, 51, 205);
+}
+
+#radio4:checked ~.navigation-auto .auto-btn4
+{
+    background: rgb(0, 51, 205);
+}
+
+/* CReation du second carrouselle */
+.bloc_second_carrousselle
+{
+    width: 100%;
+    height: 500px;
+    /* border: 1px solid black; */
+    margin-top: 110px;
+}
+.Title_2
+{
+   text-align: center;
+   padding-bottom: 40px;
+   padding-top: 15px;
+}
+#div_explore
+{
+    width: 95%;
+    height: auto;
+    text-align: end;
+    margin: auto;
+}
+.explore
+{
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    padding-top: 5px;
+    border-radius: 5px;
+    background-color: rgb(0, 51, 205);
+    text-decoration: none;
+    color: white;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    box-shadow: 2px 2px 2px rgb(57, 57, 57);
+}
+.bloc_second_carrousselle p
+{
+    padding-top: 30px;
+    width: auto;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.div_withney
+{
+    width: 86%;
+    margin: auto;
+    height: 1px;
+    background: linear-gradient(120deg,rgb(255, 255, 255),rgb(0, 0, 0),rgb(255, 255, 255));
+}
+#second_carrousselle
+{
+    width: 95%;
+    height: 270px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid rgb(236, 224, 224);
+    border-radius: 15px;
+    box-shadow: 2px 2px 1px rgb(180, 176, 176);
+}
+.bloc_cours:hover
+{
+    transform: scale(1.1);
+    box-shadow: 2px 2px 10px rgb(120, 118, 118);
+}
+.bloc_cours
+{
+    width: 15%;
+    height: 85%;
+    border: 1px solid rgb(221, 220, 220);
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.cours
+{
+    width: 100%;
+    height: 20%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    
+}
+.text_cours
+{
+    padding: 0px 5px 5px 5px;
+    text-align: center;
+    font-size: 12px;
+}
+.bloc_text_cours
+{
+    width: 95%;
+    border-radius: 15px;
+    /* background-color: rgb(14, 41, 148); */
+    margin-left: 2.5%;
+    color: rgb(0, 0, 0);
+}
+#second_carrousselle h2
+{
+    /* border: 1px solid black; */
+    text-align: center;
+    font-size: 18px;
+    padding: 5px 0px 15px 0px;
+}
+.img2
+{
+    width: auto;
+    height: 100%;
+}
+.text_cours a
+{
+   text-decoration: none;
+   color: rgb(0, 51, 205);
+   font-style: italic;
+}
+#bloc_menu
+{
+    display: none;
+}
+.left-arrow,.right-arrow
+{
+    display: none;
+}
+@media screen and (max-width: 280px)
+{
+    html
+    {
+        width: auto;
+    }
+    body
+    {
+        width: auto;
+    }
+    .block_slide
+    {
+        width: 100vh;
+    }
+    .manual-btn:hover
+    {
+        background:rgb(255, 255, 255) ;
+    }
+    /* Nav responsive */ 
+    #shadowOfPges
+    {
+     position: fixed;
+     top: 0%;
+     display: none;
+     z-index: 2;
+     background-color: rgba(0, 0, 0, 0.74);
+     width: 100vh;
+     height: 500vh;
+    }
+    #nav_bar
+    {
+     height: 110px;
+    }
+    #logo
+    {
+        width: 210px;
+        height: 80px;
+        /* border: 1px solid black;  */
+    }
+    
+    .div_icon_search_responsive
+     {
+         margin-right: 20px;
+         display: flex;
+         justify-content: flex-end;
+         align-items: center;
+         width: 60%;
+         height: 100%;
+         /* border: 1px solid white; */
+         
+     }
+     .icon_search_responsive
+     {
+         color: white;
+         font-size: 40px;
+     }
+     #Bloc_menu
+     {
+         display: block;
+         width: 50px;
+         height: 50px;
+         margin-left: 15px;
+         
+     }
+  
+     #bloc_menu
+     {
+          margin-top: -10px;
+          width: 95%;
+          height: 120px;
+          position: absolute;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-bottom: 1px solid black; 
+     }
+     .menu
+     {
+      
+      font-size:  50px;
+      color: white;
+     }
+  
+     .menu1
+     {
+      /* margin-top: -10px; */
+      padding-right: 10px;
+      font-size: 50px;
+      color: rgb(0, 0, 0);
+      /* border: 1px solid black; */
+  
+     }
+     .nav_part2
+     { 
+          display: flex;
+          flex-direction:column;
+          position: absolute;
+          width: 80%;
+          height: 500vh;
+          background-color: rgb(255, 255, 255);
+          transition: all 0.5s ease;
+          margin-left: -100%;
+          z-index: 4000000;
+     }
+     .nav_part2.mobile-menu 
+     {
+         transition: all 0.7s ease;
+         margin-left: 0%;
+     }
+      #ig-pedia_link
+      {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          position: relative;
+          top: 6.5%; 
+          /* left: -11.5%; */
+          
+          
+      }
+      #ig-pedia_link a
+      {
+          width: 92%;
+          display: block;
+          padding-bottom: 60px;
+          margin-left: 15px;
+          height: 30px;
+          padding-top: 20px;
+          text-decoration: none;
+          font-size: 30px;
+          border-bottom: 1px solid rgb(0, 0, 0);
+          /* border: 1px solid black; */
+          color: rgb(100, 100, 100);
+          
+      }
+      .NameOfMenu div 
+      {
+         margin-top: -10px;
+          /* border: 1px solid black; */
+          height: 30px;
+          display: block;
+          font-size: 45px;
+          font-weight: bold;
+      }
+      .NameOfMenu
+      {
+          display: flex;
+          /* border: 1px solid black; */
+          align-items: center;
+      }
+      .NameOfMenu img
+      {
+          width: 190px;
+          height: 80px;
+          display: none;
+      }
+      .login
+      {
+         
+          background-color: rgba(255, 255, 255, 0);
+          border-radius: 0px;
+          text-align: left;
+  
+          font-weight: bold;
+  
+      }
+  
+      .signup
+      {
+         
+          background-color: rgba(0, 0, 0, 0);
+          border-radius: 0px;
+          text-align: left;
+          border: 0px;
+  
+          font-weight: bold;
+      }
+  
+      .apropos
+      {
+          
+          background-color: rgba(255, 255, 255, 0);
+          border-radius: 0px;
+          text-align: left;
+  
+          font-weight: bold;
+          
+          
+      }
+      .profil
+      {
+          background-color: rgba(240, 248, 255, 0);
+      }
+      .profil i 
+      {
+         display: none;
+  
+         
+  
+      }
+      .profil_text
+      {
+          display: block;
+          background-color: rgba(255, 255, 255, 0);
+          font-size: 30px;
+          font-weight: bold;
+          color: rgb(100, 100, 100);
+          text-align: left;
+          width: 30px;
+          height: 30px;
+          border-radius: 0px;
+      }
+
+    /* style bar de recherche */
+    #ig-pedia_search_bar
+    {
+        display: none;
+        justify-content: flex-start;
+        /* border: 1px solid black; */
+    }
+    #search
+    {
+        height: 25px;
+        outline: none;
+        width: 300px;
+        border: 0px;
+        border-radius: 14px 0px 0px 14px;
+        padding-left: 15px;
+    }
+    #search ::placeholder
+    {
+        font-size: 15px;
+    }
+    .bouton_search
+    {
+        width: 40px;
+        border: 0px;
+        background-color: white;
+        border-radius: 0px 14px 14px 0px;
+        cursor: pointer;
+    }
+        /* Responsive footer  */
+        footer
+        {
+            width:100vh;
+            height: auto;
+    
+        }
+        /* Gestion de la premiere partie du footer  */
+        .liens_footer
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            /* border: 1px solid black ; */
+        }
+    
+        .contenu,.aide
+        {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+           
+            /* border: 1px solid black ; */
+    
+        }
+        .contenu h1 , .aide h1
+        {
+    
+            margin-top: 40px ;
+            margin-left: 0px;
+            color: white;
+            font-size: 35px;
+        }
+        .contenu a , .aide a 
+        {
+    
+            text-decoration: none;
+            color: white;
+            margin-top: 30px ;
+            margin-left: 0px;
+            font-size: 25px;
+        }
+        .aide
+        {
+     
+            width: 100%;
+            /* border: 1px solid black ;    */
+        }   
+        .trait
+        {
+            width:100%;
+            margin: auto;
+            height: 1px;
+            background: linear-gradient(120deg,rgb(113, 110, 110),rgb(255, 255, 255),rgb(96, 93, 93));
+        }
+        .icone_footer
+        {
+            display: flex;
+            /* border: 1px solid black; */
+            width: 100%;
+            justify-content: space-between;
+            height: 100px;
+            margin-top: 10px;
+            
+        }
+        /* gestion de la deuxieme partie du footer  */
+        .langage
+        {
+            display: none;
+           
+        }
+     
+        /* Gestion de la deuxieme partie de la deuxieme partie du footer parceque oui cette dernière est subdivisé en trois partie donc trois div */
+        .copyrigth
+        {
+            width: 70%;
+            /* border: 1px solid black; */
+            font-size: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+       
+        .icon_div
+        {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 30%;
+            /* border: 1px solid black; */
+        }
+        .icon_div a
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            /* border: 1px solid black; */
+        }
+        .icon_div a img
+        {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+        }
+        .icon_div a img[alt="Twitter icon "]
+        {
+            background: white;
+        }
+        /* Responsive meilleurs catégories */
+        #espace
+        {
+            height: 120px;
+    
+        }
+        #title_categorie
+        {
+            margin: 0px;
+            width: 100vh;
+            font-size: 25px;
+            text-align: center;
+            margin-top: 100px;
+            /* border: 1px solid black; */
+        }
+        #categorie
+        {
+            height: auto;
+            font-size: 25px;
+            width: 100vh;
+    
+        }
+        .img_categorie_1
+        {
+            flex-direction: column;
+            height: auto;
+            /* border: 1px solid black; */
+            margin-bottom: 30px;
+        }
+        .img_categorie_2
+        {
+            display: none;
+        }
+        .image
+        {
+            width: 400px;
+            height: 450px;
+    
+        }
+        .img
+        {
+            width: 350px;
+            height: 350px;
+        }
+        .Title_2
+        {
+            font-size: 25px;
+        }
+    /* Responsive meilleurs catégories */
+    #espace
+    {
+        height: 150px;
+
+    }
+    #categorie
+    {
+
+        width: 100vh;
+
+    }
+    .Title_2
+    {
+        font-size: 25px;
+    }
+    .bloc_second_carrousselle
+    {
+        width: 100vh;
+        height: auto;
+        /* border: 1px solid black; */
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+
+    #second_carrousselle
+    {
+        width:100vh;
+        height: 1500px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        border: 0px solid rgb(236, 224, 224);
+        border-radius: 15px;
+        box-shadow: 2px 2px 1px rgb(180, 176, 176);
+    }
+    .bloc_second_carrousselle p
+    {
+        font-size: 25px;
+    }
+    .bloc_cours
+    {
+        width: 300px;
+        height: 430px;
+        border: 1px solid rgb(221, 220, 220);
+        border-radius: 15px;
+        background-color: rgb(255, 255, 255);
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .cinquieme,.quatrieme
+    {
+        display: none;
+    }
+    .text_cours div
+    {
+        font-size: 23px;
+    }
+    .text_cours a
+    {
+        font-size: 24px;
+    }
+    .h1
+    {
+
+        width: 100vh;
+        /* border:1px solid black; */
+    }
+    .h1
+    {
+
+        width: 100vh;
+        /* border:1px solid black; */
+    }
+    #carrousel
+    {
+        width: 100vh;
+        height: 500px;
+
+        margin: auto;
+    }
+    #container
+    {
+
+        height: 500px;
+    }
+    #container1
+    {
+        width: 500px;
+        height: 500px;
+    }
+    .Images img
+    {
+        width: 500px;
+        height: 500px;
+    }
+    .explore
+    {
+        font-size: 20px;
+    }
+}
+@media screen and (min-width : 281px) and (max-width: 500px)
+{
+    /* Nav responsive */ 
+   /* Nav responsive */ 
+   #shadowOfPges
+   {
+    position: fixed;
+    top: 0%;
+    display: none;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.74);
+    width: 100vh;
+    height: 500vh;
+   }
+   #nav_bar
+   {
+    height: 110px;
+   }
+   #logo
+   {
+       width: 210px;
+       height: 80px;
+       /* border: 1px solid black;  */
+   }
+   
+   .div_icon_search_responsive
+    {
+        margin-right: 20px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 60%;
+        height: 100%;
+        /* border: 1px solid white; */
+        
+    }
+    .icon_search_responsive
+    {
+        color: white;
+        font-size: 40px;
+    }
+   #Bloc_menu
+   {
+       display: block;
+       width: 50px;
+       height: 50px;
+       margin-left: 15px;
+       
+   }
+
+   #bloc_menu
+   {
+        margin-top: -10px;
+        width: 95%;
+        height: 120px;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid black; 
+   }
+   .menu
+   {
+    
+    font-size:  50px;
+    color: white;
+   }
+
+   .menu1
+   {
+    /* margin-top: -10px; */
+    padding-right: 10px;
+    font-size: 50px;
+    color: rgb(0, 0, 0);
+    /* border: 1px solid black; */
+
+   }
+   .nav_part2
+   { 
+        display: flex;
+        flex-direction:column;
+        position: absolute;
+        width: 80%;
+        height: 500vh;
+        background-color: rgb(255, 255, 255);
+        transition: all 0.5s ease;
+        margin-left: -100%;
+        z-index: 4000000;
+   }
+   .nav_part2.mobile-menu 
+   {
+       transition: all 0.7s ease;
+       margin-left: 0%;
+   }
+    #ig-pedia_link
+    {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        position: relative;
+        top: 6.5%; 
+        /* left: -11.5%; */
+        
+        
+    }
+    #ig-pedia_link a
+    {
+        width: 92%;
+        display: block;
+        padding-bottom: 60px;
+        margin-left: 15px;
+        height: 30px;
+        padding-top: 20px;
+        text-decoration: none;
+        font-size: 30px;
+        border-bottom: 1px solid rgb(0, 0, 0);
+        /* border: 1px solid black; */
+        color: rgb(100, 100, 100);
+        
+    }
+    .NameOfMenu div 
+    {
+       margin-top: -10px;
+        /* border: 1px solid black; */
+        height: 30px;
+        display: block;
+        font-size: 45px;
+        font-weight: bold;
+    }
+    .NameOfMenu
+    {
+        display: flex;
+        /* border: 1px solid black; */
+        align-items: center;
+    }
+    .NameOfMenu img
+    {
+        width: 190px;
+        height: 80px;
+        display: none;
+    }
+    .login
+    {
+       
+        background-color: rgba(255, 255, 255, 0);
+        border-radius: 0px;
+        text-align: left;
+
+        font-weight: bold;
+
+    }
+
+    .signup
+    {
+       
+        background-color: rgba(0, 0, 0, 0);
+        border-radius: 0px;
+        text-align: left;
+        border: 0px;
+
+        font-weight: bold;
+    }
+
+    .apropos
+    {
+        
+        background-color: rgba(255, 255, 255, 0);
+        border-radius: 0px;
+        text-align: left;
+
+        font-weight: bold;
+        
+        
+    }
+    .profil
+    {
+        background-color: rgba(240, 248, 255, 0);
+    }
+    .profil i 
+    {
+       display: none;
+
+       
+
+    }
+    .profil_text
+    {
+        display: block;
+        background-color: rgba(255, 255, 255, 0);
+        font-size: 30px;
+        font-weight: bold;
+        color: rgb(100, 100, 100);
+        text-align: left;
+        width: 30px;
+        height: 30px;
+        border-radius: 0px;
+    }
+    /* style bar de recherche */
+    #ig-pedia_search_bar
+    {
+        width: 60%;
+        display: none;
+        justify-content: flex-start;
+        /* border: 1px solid black; */
+    }
+    #search
+    {
+        height: 30px;
+        outline: none;
+        width: 100%;
+        border: 0px;
+        border-radius: 14px 0px 0px 14px;
+        padding-left: 15px;
+    }
+    #search ::placeholder
+    {
+        font-size: 15px;
+    }
+    .bouton_search
+    {
+        width: 40px;
+        border: 0px;
+        background-color: white;
+        border-radius: 0px 14px 14px 0px;
+        cursor: pointer;
+    }
+    /* Responsive footer  */
+    footer
+    {
+        width:100vh;
+        height: auto;
+
+    }
+    /* Gestion de la premiere partie du footer  */
+    .liens_footer
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+        /* border: 1px solid black ; */
+    }
+
+    .contenu,.aide
+    {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       
+        /* border: 1px solid black ; */
+
+    }
+    .contenu h1 , .aide h1
+    {
+
+        margin-top: 40px ;
+        margin-left: 0px;
+        color: white;
+        font-size: 35px;
+    }
+    .contenu a , .aide a 
+    {
+
+        text-decoration: none;
+        color: white;
+        margin-top: 30px ;
+        margin-left: 0px;
+        font-size: 25px;
+    }
+    .aide
+    {
+ 
+        width: 100%;
+        /* border: 1px solid black ;    */
+    }   
+    .trait
+    {
+        width:100%;
+        margin: auto;
+        height: 1px;
+        background: linear-gradient(120deg,rgb(113, 110, 110),rgb(255, 255, 255),rgb(96, 93, 93));
+    }
+    .icone_footer
+    {
+        display: flex;
+        /* border: 1px solid black; */
+        width: 100%;
+        justify-content: space-between;
+        height: 100px;
+        margin-top: 10px;
+        
+    }
+    /* gestion de la deuxieme partie du footer  */
+    .langage
+    {
+        display: none;
+       
+    }
+ 
+    /* Gestion de la deuxieme partie de la deuxieme partie du footer parceque oui cette dernière est subdivisé en trois partie donc trois div */
+    .copyrigth
+    {
+        width: 70%;
+        /* border: 1px solid black; */
+        font-size: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+   
+    .icon_div
+    {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 30%;
+        /* border: 1px solid black; */
+    }
+    .icon_div a
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        /* border: 1px solid black; */
+    }
+    .icon_div a img
+    {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+    }
+    .icon_div a img[alt="Twitter icon "]
+    {
+        background: white;
+    }
+    /* Responsive meilleurs catégories */
+    #espace
+    {
+        height: 120px;
+
+    }
+    #title_categorie
+    {
+        margin: 0px;
+        width: 100vh;
+        font-size: 25px;
+        text-align: center;
+        margin-top: 100px;
+        /* border: 1px solid black; */
+    }
+    #categorie
+    {
+        height: auto;
+        font-size: 25px;
+        width: 100vh;
+
+    }
+    .img_categorie_1
+    {
+        flex-direction: column;
+        height: auto;
+        /* border: 1px solid black; */
+        margin-bottom: 30px;
+    }
+    .img_categorie_2
+    {
+        display: none;
+    }
+    .image
+    {
+        width: 400px;
+        height: 450px;
+
+    }
+    .img
+    {
+        width: 400px;
+        height: 400px;
+    }
+    .Title_2
+    {
+        font-size: 25px;
+    }
+    .bloc_second_carrousselle
+    {
+        width: 100vh;
+        height: auto;
+        /* border: 1px solid black; */
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+
+    #second_carrousselle
+    {
+        width:100vh;
+        height: 1500px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        border: 0px solid rgb(236, 224, 224);
+        border-radius: 15px;
+        box-shadow: 2px 2px 1px rgb(180, 176, 176);
+    }
+    .bloc_second_carrousselle p
+    {
+        font-size: 25px;
+    }
+    .bloc_cours
+    {
+        width: 300px;
+        height: 430px;
+        border: 1px solid rgb(221, 220, 220);
+        border-radius: 15px;
+        background-color: rgb(255, 255, 255);
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .cinquieme,.quatrieme
+    {
+        display: none;
+    }
+    .text_cours div
+    {
+        font-size: 23px;
+    }
+    .text_cours a
+    {
+        font-size: 24px;
+    }
+    .h1
+    {
+
+        width: 100vh;
+        /* border:1px solid black; */
+    }
+    .block_slide
+    {
+        width: 100vh; 
+    }
+    .manual-btn:hover
+    {
+        background:rgb(255, 255, 255) ;
+    }
+    .explore
+    {
+        font-size: 20px;
+    }
+    /* .left-arrow,.right-arrow
+    {
+        display: block;
+        font-size: 76px;
+        cursor: pointer;
+        opacity: 0.5;
+        transition: all  0.2s ease-in-out;
+    }
+    .left-arrow
+    {
+        position: absolute;
+        top: 50%;
+        right: 10%;
+    }
+    .left-arrow:hover,.right-arrow:hover
+    {
+        font-size: 90px;
+        opacity: 1;
+    }
+    .right-arrow
+    {
+        position:absolute;
+        top: 50%;
+        left: 10%;
+    } */
+ 
+}
+@media screen and (min-width : 501px) and (max-width: 700px)
+{
+    #logo
+    {
+        width: 150px;
+        height: 60px;
+        /* border: 1px solid black;  */
+    }
+    /* deuxième partie de la nav_bar constitué de la bar de recherche des liens login signup apropos et profil */
+    .nav_part2
+    {
+        width: 40%;
+        display: flex;
+        justify-content:space-around;
+        align-items: center;
+        /* border: 1px solid black;  */
+        
+    }
+    /* style bar de recherche */
+    #ig-pedia_search_bar
+    {
+        display: flex;
+        justify-content: flex-start;
+        /* border: 1px solid black; */
+    }
+    #search
+    {
+        height: 30px;
+        outline: none;
+        width: 80%;
+        border: 0px;
+        border-radius: 14px 0px 0px 14px;
+        padding-left: 15px;
+    }
+    #search::placeholder
+    {
+        font-size: 12px;
+    }
+    .bouton_search
+    {
+        width: 30px;
+        border: 0px;
+        background-color: white;
+        border-radius: 0px 14px 14px 0px;
+        cursor: pointer;
+    }
+    /* gestion des liens  */
+    #ig-pedia_link
+    {
+        display: flex;
+        justify-content: space-around ;
+        width: 500px;
+    }
+    #ig-pedia_link a
+    {
+        display: flex;
+        justify-content: center;
+        height: 30px;
+        align-items: center;
+        text-decoration: none;
+        font-size: 12px;
+    }
+    .login
+    {
+        width: 60px;
+        background-color: white;
+        border-radius: 14px;
+        text-align: center;
+        border: 0px;
+        color: black;
+        font-weight: bold;
+
+    }
+    .signup
+    {
+        width: 60px;
+        background-color: rgb(0, 0, 0);
+        border-radius: 14px;
+        text-align: center;
+        border: 0px;
+        color: white;
+        font-weight: bold;
+        
+    }
+    .apropos
+    {
+        width: 60px;
+        background-color: white;
+        border-radius: 14px;
+        text-align: center;
+        border: 0px;
+        color: black;
+        font-weight: bold;
+    }
+    .profil
+    {
+        background-color: white;
+        font-size: 20px;
+        color: black;
+        text-align: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 4px;
+
+    }
+    .profil_text
+    {
+        display: none;
+    }
+    #Bloc_menu
+    {
+        width: 32px;
+        height: 30px;
+        display: none;
+    }
+    .menu
+    {
+        font-size: 40px;
+    }
+    #second_carrousselle
+    {
+        width:100vh;
+        /* height: 1500px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        border: 0px solid rgb(236, 224, 224);
+        border-radius: 15px;
+        box-shadow: 2px 2px 1px rgb(180, 176, 176); */
+    }
+    .cinquieme,.quatrieme
+    {
+        display: none;
+    }
+    .bloc_cours
+    {
+        width: 180px;
+        height: 250px;
+        border: 1px solid rgb(221, 220, 220);
+        border-radius: 15px;
+        background-color: rgb(255, 255, 255);
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    #categorie
+    {
+        height: auto;
+
+        width: 100vh;
+
+    }
+    footer
+    {
+        width:100vh;
+        
+
+    }
+    .langage
+    {
+        display: none;
+       
+    }
+    .contenu h1 , .aide h1
+    {
+        margin-top: 40px ;
+        margin-left: 0px;
+
+    }
+    .contenu a , .aide a 
+    {
+
+        margin-left:0px;
+
+    }
+}
+@media screen and (min-width : 701px) and (max-width: 1150px)
+{
+    #logo
+    {
+        width: 170px;
+        height: 70px;
+        /* border: 1px solid black;  */
+    }
+    /* deuxième partie de la nav_bar constitué de la bar de recherche des liens login signup apropos et profil */
+    .nav_part2
+    {
+        width: 40%;
+        display: flex;
+        justify-content:space-around;
+        align-items: center;
+        /* border: 1px solid black;  */
+        
+    }
+    /* style bar de recherche */
+    #ig-pedia_search_bar
+    {
+        display: flex;
+        justify-content: flex-start;
+        /* border: 1px solid black; */
+    }
+    #search
+    {
+        height: 30px;
+        outline: none;
+        width: 80%;
+        min-width: 240px;
+        border: 0px;
+        border-radius: 14px 0px 0px 14px;
+        padding-left: 15px;
+    }
+    #search::placeholder
+    {
+        font-size: 12px;
+    }
+    .bouton_search
+    {
+        width: 30px;
+        border: 0px;
+        background-color: white;
+        border-radius: 0px 14px 14px 0px;
+        cursor: pointer;
+    }
+    /* gestion des liens  */
+    #ig-pedia_link
+    {
+        display: flex;
+        justify-content: space-around ;
+        width: 500px;
+    }
+    #ig-pedia_link a
+    {
+        display: flex;
+        justify-content: center;
+        height: 30px;
+        align-items: center;
+        text-decoration: none;
+        font-size: 12px;
+    }
+    .login
+    {
+        width: 60px;
+        background-color: white;
+        border-radius: 14px;
+        text-align: center;
+        border: 0px;
+        color: black;
+        font-weight: bold;
+
+    }
+    .signup
+    {
+        width: 60px;
+        background-color: rgb(0, 0, 0);
+        border-radius: 14px;
+        text-align: center;
+        border: 0px;
+        color: white;
+        font-weight: bold;
+        
+    }
+    .apropos
+    {
+        width: 60px;
+        background-color: white;
+        border-radius: 14px;
+        text-align: center;
+        border: 0px;
+        color: black;
+        font-weight: bold;
+    }
+    .profil
+    {
+        background-color: white;
+        font-size: 20px;
+        color: black;
+        text-align: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 4px;
+
+    }
+    .profil_text
+    {
+        display: none;
+    }
+    #Bloc_menu
+    {
+        width: 32px;
+        height: 30px;
+        display: none;
+    }
+    .menu
+    {
+        font-size: 40px;
+    }
+    #second_carrousselle
+    {
+        width:90vw;
+        /* height: 1500px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        border: 0px solid rgb(236, 224, 224);
+        border-radius: 15px;
+        box-shadow: 2px 2px 1px rgb(180, 176, 176); */
+    }
+.quatrieme
+    {
+        display: none;
+    }
+    .bloc_cours
+    {
+        width: 180px;
+        height: 250px;
+        border: 1px solid rgb(221, 220, 220);
+        border-radius: 15px;
+        background-color: rgb(255, 255, 255);
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    #categorie
+    {
+        height: auto;
+
+        width: 80vw;
+
+    }
+    footer
+    {
+        width:100vw;
+    }
+    .langage
+    {
+        display: none;
+       
+    }
+    .contenu h1 , .aide h1
+    {
+        margin-top: 40px ;
+        margin-left: 0px;
+
+    }
+    .contenu a , .aide a 
+    {
+
+        margin-left:0px;
+
+    }
+}

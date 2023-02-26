@@ -1,0 +1,23 @@
+Point des choses à améliorer sur les pages : 
+	ACCEUIL 
+-S'arranger pour que le zoom dégueulasse sur la responsivité soit réglé 
+-voir si on peut empecher l'utilisateur de zoomer avec le controle +
+-Egalement régler le problème du menu Hamburger qui s'affiche de manière un peu déguelasse au chargement de la page 
+-Voir aussi si on ne peut pas rajouter une petite animation au début pendant le chragement de la page comme openclassrooms ou rabelais 
+-Les écritures sont également trop petites sur le responsives s'arranger pour augmenter les tailles des écrits 
+-Supprimer la search bar sur la version responsive et la remplacer par une icone de recherhe un peu comme sur openclassrooms bref s'arranger pour que la nav bar responsive soit comme cela 
+-Et puis ne pas surtout oublier le menu hamburger à  la sauce de openclassromms 
+-Au niveau du footer retirer l'option pour changer de langue et ainsi laisser plus de place au copyrigth et au différentes icones 
+-Trouver le moyen qu'il faut pour revoir son code et s'arranger pour qu'il soit plus propre pour éviter les beugs chelou comme on voit sur les pc des autres 
+-Regler le problème avec vh et vw dans le code et l'optimiser le plus possible 
+-Penser a un meilleur affichage pour la partir où des cours sont proposés avec l'option voir plus(L'afichage pour la responsivité doit etre meilleur ) 
+-le carroussel doir etre revu de telle sorte qu'il soit meilleur avec du css et du javascript comme on le veut (une image vient et dure 2s avant de se mettre a défiler et meme chose pour la suivante ) 
+	Concernant les pages login et signup
+-Deja pour la version pc le back à  cote du bouton retour doit etre retiré 
+-Le centrage au niveau des bouton login et signup doivent etre amélioré de telle sorte que l'affichage soit fluide partout (avec flex box par exemple ) 
+-le remember me doit etre revu avec du js et du css sur du onclick par exmeple
+-La séparation du Or doit être revu de telle sorte qu'elle ne prenne pas tous l'espace disponibles mais soit un minimum centré 
+-la taille des  écrits dans le formulaire doit être également revu .  
+-Sans oublier de créer les classes d'erreur dont sufyane parlait 
+
+

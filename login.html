@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Login</title>
+</head>
+<body class="body">
+    <div id="login_block">
+        <div id="retour">
+            <a href="nav_footer.html"><i class="fa-solid fa-arrow-right"></i></a>
+            
+        </div>
+        <div id="login_block_block">
+            <div id="icon">
+                <div><img src="group.png" alt="login.png" id="Group"></div>
+            </div>
+            <div class="formulaire">
+                <form action="" method="post" id="form">
+                    <div class="form-div">
+                        <div> <img src="email.png" alt="mail"></div>
+                        <input type="email" name="mail" class="style_form" placeholder="Email" autofocus required>
+                    </div>
+                    <div class="form-div">
+                        <div><img src="padlock.png" alt="padlok"></div>
+                        <input type="text" name="password" class="style_form" required placeholder="Password">
+                    </div>
+                </form>
+            </div>
+            <div class="text">
+                <div class="remember_password">
+                    <div class="remember_me">
+                        <div class="radio_father">
+                            <div class="radio"></div>
+                        </div>
+                        <div class="radio_label">Remember me</div>
+                    </div>
+                    <div class="Forgot_password"><a href="">Forgot password ?</a></div>
+                </div>
+                <div class="account">Don't have account? <a href="sign_up.html"> Sign-up</a></div>
+                <div id="login">LOGIN</div>
+            </div>
+            <div class="separate">
+                <div class="trait"></div>
+                <div class="or">Or</div>
+                <div class="trait"></div>
+            </div>
+            <div class="bloc_footer">
+                <div class="with">Continue With</div>
+                <div class="icon2">
+                    <div class="image_icon2" ><a href=""><img src="facebook.png" alt="facebook"></a></div>
+                    <div class="image_icon2" ><a href=""><img src="google.png" alt="google"></a></div>
+                    <div class="image_icon2" ><a href=""><img src="twitter.png" alt="twitter"></a></div>
+                </div>
+            </div>
+                
+        </div>
+    </div>
+    <script type="text/javascript">
+        const radio=document.querySelector(".radio");
+        var i=0;
+            radio.addEventListener('click',()=>{
+                        radio.style.background="rgb(32, 32, 206)";
+                        radio.addEventListener('click',()=>{
+                             radio.style.background="white";
+                             radio.addEventListener('click',()=>{
+                                radio.style.background="rgb(32, 32, 206)";
+                                radio.addEventListener('click',()=>{
+                                    radio.style.background="white";
+                        })
+                    })
+                        })
+                    })
+                    console.log(i);
+            
+        
+                
+            
+        
+        
+
+    </script>
+</body>
+</html>

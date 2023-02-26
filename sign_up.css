@@ -1,0 +1,448 @@
+*
+{
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* font-family: 'Gill Sans', 'Gill Sans MT',Calibri, 'Trebuchet MS', sans-serif; */
+    /* border: 1px solid red; */
+    /* background-color: red; */
+}
+html
+{
+    height: 100%;
+    /* border: 1px solid black; */
+}
+.body
+{
+    width: 900px;
+    height: 100%;
+    margin: auto;
+    background-color: rgb(42, 42, 42);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+
+#login_block
+{
+    margin: auto;
+    width: 60%;
+    height: 100%;
+    background:url(Binary_Life1.jpg) fixed  ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+#login_block_block
+{
+    width: auto;
+    height: auto;
+}
+#icon
+{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#user
+{
+    width: 70px;
+    height: 70px;
+}
+.formulaire
+{
+
+    width: 100%;
+    height: 250px;
+    /* border: 1px solid black; */
+}
+#form
+{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.style_form
+{
+
+    width: 310px;
+    height: 40px;
+    outline: none;
+    padding-left:15px ;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.305);
+    font-size: 16px;
+    border: 0px;
+    color: white;
+    font-weight: bold;
+}
+::placeholder
+{
+    color:rgb(196, 196, 196);
+}
+.form-div
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.form-div div
+{
+    width: 40px;
+    height: 40px;
+    background-color: rgb(32, 32, 206);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-div img
+{
+    width: 30px;
+    height: 30px;
+}
+.text
+{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 120px;
+    margin-bottom: 10px;
+    /* border: 1px solid black; */
+    font-weight: bold;
+}
+.remember_password
+{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* border: 1px solid black; */
+    padding-left:  2px;
+    color: rgb(213, 213, 213);
+    font-size: 14px;
+    font-weight: bold;
+
+}
+.remember_me
+{
+    /* border:1px solid white ; */
+    /* height: 30px; */
+    width: 110px;
+    display: flex;
+    justify-content: space-between  ;
+    align-items: center;
+}
+.radio_father
+{
+    /* height: 100%; */
+    display: flex;
+    align-items: center;
+}
+.radio
+{
+    width: 15px;
+    height: 15px;
+    border:3px solid white ;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+}
+.Forgot_password a
+{
+    text-decoration: none;
+    color: rgb(213, 213, 213);
+}
+.account
+{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(212, 212, 212);
+    font-size: 14px;
+    font-weight: bold;
+
+}
+.account a
+{
+    color: white;
+    font-style: italic;
+}
+#login
+{
+    width: 350px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.305);
+    transition: all 0.4s ease;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer; 
+    color: rgb(255, 255, 255);
+}
+#login:hover
+{
+    transform: scale(1.1);
+}
+.separate
+{
+    width: 100%;
+    height: 20px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+}
+.trait
+{
+    width: 130px;
+    height: 1px;
+    border-top: 1px solid white;
+}
+.or
+{
+    width: 20px;
+    color: white;
+    font-size: 20px;
+}
+.bloc_footer
+{
+    margin: auto;
+    width: 60%;
+    display: flex;
+    flex-direction:column ;
+    justify-content: flex-start;
+    align-items: center;
+    /* border: 1px solid rgb(255, 254, 254); */
+    height: 100px;
+}
+.with
+{
+    color: white;
+    font-size: 18px;
+    /* border: 1px solid black; */
+}
+.icon2
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    margin: auto;
+
+    /* border: 1px solid black; */
+}
+.icon a
+{
+    display: block;
+}
+.icon2 img
+{
+    width: 30px;
+    height: 30px;
+}
+#retour
+{
+    width: 50px;
+    position: absolute;
+    top: 1%;
+    left: 3%;
+    font-size: 25px;
+    border-radius: 5px;
+    /* border: 1px solid white; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+
+}
+#retour a{
+    color: rgb(255, 255, 255);
+    display: block;
+    transform: rotate(180deg);
+}
+
+@media screen and (max-width: 360px)
+{
+    *
+    {
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    html
+    {
+        height: 100%;
+  
+    }
+    .body
+    {
+        min-width: 200px;
+        width: auto;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #login_block_block
+    {
+        width: 100%;
+        height: auto;
+        /* border: 1px solid white; */
+    }
+    #login_block
+    {
+        width: 100%;
+        height: 100%;
+        /* border: 1px solid white; */
+    }
+
+    #icon img
+    {
+        width: 50px;
+        height: 50px;
+    }
+    .style_form
+    {
+
+        width: 100%;
+        height: 30px;
+        font-size: 12px;
+       
+    }
+    .form-div
+    {
+        width: 100%;
+    }
+    .form-div div
+    {
+        width: 30px;
+        height: 30px;
+
+    }
+    .form-div img
+    {
+        width: 20px;
+        height: 20px;
+    }
+        .formulaire
+    {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    #form
+    {
+        width: 70%;
+        /* border: white 1px solid; */
+        
+    }
+    ::placeholder
+    {
+        font-size: 12px;
+    }
+    .remember_password
+    {
+        width: 90%;
+
+
+    }
+    .trait
+    {
+        width: 100px;
+    }
+    .with
+    {
+        font-size: 15px;
+        /* border: 1px solid black; */
+    }
+    .or
+    {
+
+        font-size: 17px;
+
+    }
+    #login 
+    {
+        height: 30px;
+        width: 70%;
+    }
+    #login:hover
+{
+    transform: scale(1.1);
+}
+    #retour
+    {
+        width: 100px;
+        height: 30px;
+
+    }
+
+}
+    @media screen and (max-width: 500px)
+    {
+        *
+    {
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    html
+    {
+        height: 100%;
+        
+    }
+    .body
+    {
+        min-width: 200px;
+        width: auto;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .style_form
+    {
+
+        font-size: 12px;
+    }
+    #login_block
+    {
+        width: 100%;
+        height: 100%;
+    }
+    #retour
+    {
+        width: 100px;
+        height: 30px;
+
+    }
+    .trait
+    {
+        width: 130px;
+    }
+    }
+@media screen and (max-height : 570px)
+{
+    html
+    {
+        height: auto;
+    }
+    .body
+    {
+        height: auto;
+    }
+}
+
